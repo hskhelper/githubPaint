@@ -26,7 +26,7 @@ public class App extends JFrame {
 	private static final long serialVersionUID = 5096147644474297857L;
 
 	// 程序名称
-	private final String name = "几何画板";
+	private final String name = "软件201李晓鹏202011050028";
 
 	/**
 	 * 画板（JPanel类型）
