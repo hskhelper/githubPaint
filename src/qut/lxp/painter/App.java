@@ -22,9 +22,6 @@ import qut.lxp.painter.UI.TransparencyMenu;
  */
 public class App extends JFrame {
 
-	// 序列化版本ID
-	private static final long serialVersionUID = 5096147644474297857L;
-
 	// 程序名称
 	private final String name = "软件201李晓鹏202011050028";
 
