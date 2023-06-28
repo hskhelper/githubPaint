@@ -5,6 +5,14 @@ import java.awt.Graphics2D;
 
 /**
  * 外观属性接口
+ * 这个接口描述了外观属性的基本操作，
+ * 包括获取和设置透明度、画笔宽度、颜色等，
+ * 以及将外观属性应用到图形绘制中。
+ * 它是桥接模式的一部分，
+ * 将外观属性的操作与具体的实现分离，
+ * 使得可以独立地修改和扩展外观属性的行为。
+ * 其他类可以实现该接口来提供不同的外观属性实现，
+ * 并通过接口方法来访问和操作这些属性。
  */
 public interface AppearanceItf {
 
@@ -21,14 +29,14 @@ public interface AppearanceItf {
 	public void setTransparency(float transparency);
 
 	/**
-	 * 获取粗细度
-	 * @return 粗细度
+	 * 获取画笔宽度
+	 * @return 画笔宽度
 	 */
 	public float getWidth();
 
 	/**
-	 * 设置粗细度
-	 * @param width - 粗细度
+	 * 设置画笔宽度
+	 * @param width - 画笔宽度
 	 */
 	public void setWidth(float width);
 

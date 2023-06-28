@@ -7,8 +7,10 @@ public class AppearanceMenu {
 
 	// 静态属性：颜色菜单实例
 	private static ColorMenu colorMenu;
+
 	// 静态属性：线宽菜单实例
 	private static ThicknessMenu thicknessMenu;
+
 	// 静态属性：透明度菜单实例
 	private static TransparencyMenu transparencyMenu;
 
@@ -16,8 +18,10 @@ public class AppearanceMenu {
 	public static void activeItemByAppearance(AppearanceItf appearance) {
 		// 激活颜色菜单中与外观颜色对应的项
 		colorMenu.setActiveItem(colorMenu.getMap().get(appearance.getColor()));
+
 		// 激活线宽菜单中与外观线宽对应的项
 		thicknessMenu.setActiveItem(thicknessMenu.getMap().get(appearance.getWidth()));
+
 		// 激活透明度菜单中与外观透明度对应的项
 		transparencyMenu.setActiveItem(transparencyMenu.getMap().get(appearance.getTransparency()));
 	}

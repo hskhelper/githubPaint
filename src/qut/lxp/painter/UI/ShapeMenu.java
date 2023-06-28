@@ -13,8 +13,6 @@ import qut.lxp.painter.BLL.factory.EllipseFactory;
 import qut.lxp.painter.BLL.factory.FactoryItf;
 import qut.lxp.painter.BLL.factory.LineFactory;
 import qut.lxp.painter.BLL.factory.RectangleFactory;
-import qut.lxp.painter.BLL.factory.RhombusFactory;
-import qut.lxp.painter.BLL.factory.RoundRectangleFactory;
 import qut.lxp.painter.BLL.factory.TriangleFactory;
 
 // 创建一个名为ShapeMenu的类，继承自MyJMenu，表示自定义的图形菜单
@@ -49,14 +47,7 @@ public class ShapeMenu extends MyJMenu {
 
 		mi_rectangle.addActionListener(createActionListener(mi_rectangle, new RectangleFactory()));
 		add(mi_rectangle);
-
-		mi_roundRectangle.addActionListener(createActionListener(mi_roundRectangle,
-				new RoundRectangleFactory()));
-		add(mi_roundRectangle);
-
-		mi_rhombus.addActionListener(createActionListener(mi_rhombus, new RhombusFactory()));
-		add(mi_rhombus);
-
+		
 		mi_circle.addActionListener(createActionListener(mi_circle, new CircleFactory()));
 		add(mi_circle);
 

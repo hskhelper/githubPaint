@@ -10,17 +10,17 @@ public interface ChangeableItf {
 	/**
 	 * 放大图形的方法，用于增加图形的尺寸
 	 */
-	public void zoomIn();
+	void zoomIn();
 
 	/**
 	 * 缩小图形的方法，用于减小图形的尺寸
 	 */
-	public void zoomOut();
+	void zoomOut();
 
 	/**
 	 * 根据鼠标的位移移动图形的方法，用于改变图形在画布上的位置
 	 * @param from - 鼠标起始位置，用于指示图形移动的起点
 	 * @param to - 鼠标终止位置，用于指示图形移动的终点
 	 */
-	public void move(Point from, Point to);
+	void move(Point from, Point to);
 }

@@ -1,4 +1,5 @@
 package qut.lxp.painter.UI; // 定义包名
+
 // 导入java.awt.Color类，用于表示颜色
 import java.awt.Color;
 
@@ -30,16 +31,16 @@ public class ColorMenu extends MyJMenu {
 	private JPanel board;
 
 	// 声明一个默认颜色常量，设置为黑色
-	private final Color default_color = Color.black;
+	private final Color default_color = new Color(99, 178, 238);
 
 	// 声明并初始化各种颜色的菜单项
-	private JMenuItem mi_red = new JMenuItem(" 红 ");
-	private JMenuItem mi_yellow = new JMenuItem(" 黄 ");
-	private JMenuItem mi_blue = new JMenuItem(" 蓝 ");
-	private JMenuItem mi_green = new JMenuItem(" 绿 ");
-	private JMenuItem mi_cyan = new JMenuItem(" 青 ");
-	private JMenuItem mi_orange = new JMenuItem(" 橙 ");
-	private JMenuItem mi_black = new JMenuItem(" 黑 ");
+	private JMenuItem lxp_green = new JMenuItem(" 绿色 ");
+	private JMenuItem lxp_orange = new JMenuItem(" 橙色 ");
+	private JMenuItem lxp_red = new JMenuItem(" 红色 ");
+	private JMenuItem lxp_purple = new JMenuItem(" 紫色 ");
+	private JMenuItem lxp_grey = new JMenuItem(" 灰色 ");
+	private JMenuItem lxp_coffee = new JMenuItem(" 咖啡色 ");
+	private JMenuItem lxp_pink = new JMenuItem(" 粉色 ");
 
 	// 声明一个存储颜色与菜单项映射关系的HashMap对象
 	private HashMap<Color, JMenuItem> map = new HashMap<Color, JMenuItem>();
@@ -51,42 +52,49 @@ public class ColorMenu extends MyJMenu {
 		// 将传入的画板对象赋值给当前类的board变量
 		this.board = board;
 		// 调用applySetting方法，设置默认颜色
-		applySetting(mi_black, default_color);
+		applySetting(lxp_pink, default_color);
 
 		// 设置红色菜单项的背景色，并添加动作监听器，然后将其添加到菜单中
-		mi_red.setBackground(Color.red);
-		mi_red.addActionListener(createActionListener(mi_red, Color.red));
-		add(mi_red);
+		Color colorGreen = new Color(118, 218, 145);
+		lxp_green.setBackground(colorGreen);
+		lxp_green.addActionListener(createActionListener(lxp_green, colorGreen));
+		add(lxp_green);
 
 		// 设置黄色菜单项的背景色，并添加动作监听器，然后将其添加到菜单中
-		mi_yellow.setBackground(Color.yellow);
-		mi_yellow.addActionListener(createActionListener(mi_yellow, Color.yellow));
-		add(mi_yellow);
+		Color colorOrange = new Color(248, 203, 127);
+		lxp_orange.setBackground(colorOrange);
+		lxp_orange.addActionListener(createActionListener(lxp_orange, colorOrange));
+		add(lxp_orange);
 
 		// 设置蓝色菜单项的背景色，并添加动作监听器，然后将其添加到菜单中
-		mi_blue.setBackground(Color.blue);
-		mi_blue.addActionListener(createActionListener(mi_blue, Color.blue));
-		add(mi_blue);
+		Color colorRed = new Color(248, 149, 136);
+		lxp_red.setBackground(colorRed);
+		lxp_red.addActionListener(createActionListener(lxp_red, colorRed));
+		add(lxp_red);
 
 		// 设置绿色菜单项的背景色，并添加动作监听器，然后将其添加到菜单中
-		mi_green.setBackground(Color.green);
-		mi_green.addActionListener(createActionListener(mi_green, Color.green));
-		add(mi_green);
+		Color colorPurple = new Color(147, 110, 225);
+		lxp_purple.setBackground(colorPurple);
+		lxp_purple.addActionListener(createActionListener(lxp_purple, colorPurple));
+		add(lxp_purple);
 
 		// 设置青色菜单项的背景色，并添加动作监听器，然后将其添加到菜单中
-		mi_cyan.setBackground(Color.cyan);
-		mi_cyan.addActionListener(createActionListener(mi_cyan, Color.cyan));
-		add(mi_cyan);
+		Color colorGrey = new Color(145, 146, 171);
+		lxp_grey.setBackground(colorGrey);
+		lxp_grey.addActionListener(createActionListener(lxp_grey, colorGrey));
+		add(lxp_grey);
 
 		// 设置橙色菜单项的背景色，并添加动作监听器，然后将其添加到菜单中
-		mi_orange.setBackground(Color.orange);
-		mi_orange.addActionListener(createActionListener(mi_orange, Color.orange));
-		add(mi_orange);
+		Color colorCoffee = new Color(165, 107, 91);
+		lxp_coffee.setBackground(colorCoffee);
+		lxp_coffee.addActionListener(createActionListener(lxp_coffee, colorCoffee));
+		add(lxp_coffee);
 
 		// 设置黑色菜单项的背景色，并添加动作监听器，然后将其添加到菜单中
-		mi_black.setBackground(Color.black);
-		mi_black.addActionListener(createActionListener(mi_black, Color.black));
-		add(mi_black);
+		Color colorPink = new Color(236, 98, 189);
+		lxp_pink.setBackground(colorPink);
+		lxp_pink.addActionListener(createActionListener(lxp_pink, colorPink));
+		add(lxp_pink);
 	}
 
 	// 定义一个方法，用于生成指定颜色的动作监听器
@@ -106,11 +114,11 @@ public class ColorMenu extends MyJMenu {
 	// 定义一个方法，用于应用指定的颜色设置
 	public void applySetting(JMenuItem item, Color color) {
 		// 获取当前绘制模式
-		PatternAbs pattern = ((Board)board).getNowPattern();
+		PatternAbs pattern = ((Board) board).getNowPattern();
 		// 获取当前外观设置
 		AppearanceItf appearance = pattern.getApperance();
 		// 如果外观设置不为空
-		if(appearance != null) {
+		if (appearance != null) {
 			// 设置颜色
 			appearance.setColor(color);
 			// 应用外观设置

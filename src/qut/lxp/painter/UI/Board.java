@@ -40,12 +40,14 @@ public class Board extends JPanel { // 定义Board类，继承自JPanel
 
 	public Board() { // 构造函数
 		super(); // 调用父类JPanel的构造函数
+
 		setFocusable(true); // 设置画板可获得焦点
+
 		setBackground(Color.white); // 设置画板背景颜色为白色
 	}
 
 	@Override
-	public void paint(Graphics g) { // 重写绘制方法
+	public void paint(Graphics g) { // 重写JPanel的绘制方法
 		super.paint(g); // 调用父类绘制方法
 		Graphics2D g2 = (Graphics2D)g; // 将Graphics对象转换为Graphics2D对象
 		g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON); // 设置抗锯齿渲染提示
