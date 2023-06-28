@@ -54,12 +54,16 @@ public class App extends JFrame {
 	// 构造方法
 	public App() {
 		super();
+
 		// 设置窗口名称
 		setName(name);
+
 		// 设置窗口标题
 		setTitle(name + " - 未命名.graph");
+
 		// 设置窗口大小和位置
-		setBounds(100, 100, 1000, 618);
+		setBounds(100, 100, 1500, 800);
+
 		// 设置窗口相对于屏幕居中
 		setLocationRelativeTo(null);
 
@@ -68,6 +72,7 @@ public class App extends JFrame {
 
 		// 创建菜单栏
 		JMenuBar menuBar = new JMenuBar();
+
 		// 设置菜单栏
 		setJMenuBar(menuBar);
 
