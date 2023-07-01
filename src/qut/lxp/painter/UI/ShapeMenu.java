@@ -26,8 +26,6 @@ public class ShapeMenu extends MyJMenu {
 	private JMenuItem mi_line = new JMenuItem("线段");
 	private JMenuItem mi_triangle = new JMenuItem("三角形");
 	private JMenuItem mi_rectangle = new JMenuItem("矩形");
-	private JMenuItem mi_roundRectangle = new JMenuItem("圆角矩形");
-	private JMenuItem mi_rhombus = new JMenuItem("菱形");
 	private JMenuItem mi_circle = new JMenuItem("圆形");
 	private JMenuItem mi_ellipse = new JMenuItem("椭圆");
 
@@ -47,7 +45,7 @@ public class ShapeMenu extends MyJMenu {
 
 		mi_rectangle.addActionListener(createActionListener(mi_rectangle, new RectangleFactory()));
 		add(mi_rectangle);
-		
+
 		mi_circle.addActionListener(createActionListener(mi_circle, new CircleFactory()));
 		add(mi_circle);
 

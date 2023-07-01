@@ -26,6 +26,10 @@ public class MyJMenu extends JMenu {
 
 	// 定义一个setActiveItem方法，用于设置当前选中的菜单项
 	public void setActiveItem(JMenuItem activeItem) {
+		if (activeItem == null) {
+			throw new IllegalArgumentException("activeItem cannot be null");
+		}
+
 		if(getActiveItem() != null) // 如果当前已有选中的菜单项
 			getActiveItem().setIcon(null); // 将原选中菜单项的图标设置为空
 		activeItem.setIcon(icon); // 为新选中的菜单项设置选中图标

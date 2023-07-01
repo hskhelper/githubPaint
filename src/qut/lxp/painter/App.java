@@ -62,7 +62,7 @@ public class App extends JFrame {
 		setTitle(name + " - 未命名.graph");
 
 		// 设置窗口大小和位置
-		setBounds(100, 100, 1200, 600);
+		setBounds(100, 100, 2500, 1500);
 
 		// 设置窗口相对于屏幕居中
 		setLocationRelativeTo(null);
